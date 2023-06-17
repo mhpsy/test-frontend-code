@@ -12,12 +12,23 @@ console.log(element)
 //     threshold: 0.5,// 0.5 = 50%
 // })
 
+const obIntersection = new IntersectionObserver((entries) => {
+    console.log(entries)
+    console.log(entries[0].intersectionRatio)
+    if (entries[0].isIntersecting) {
+        console.log('Element is visible in screen')
+    } else {
+        console.log('Element is not visible in screen')
+    }
+})
+
 const obMutation = new MutationObserver((mutationsList, observer) => {
-    console.log(mutationsList);
+    // console.log(mutationsList);
 
     for (let mutation of mutationsList) {
         console.log(mutation.type);
         console.log(mutation.target)
+        // obIntersection.observe(mutation.target);// 监听新添加的元素在视口中的可见性
     }
 
 })
@@ -33,5 +44,7 @@ setInterval(() => {
     const ul = element.querySelector('ul');
     const li = document.createElement('li');
     li.textContent = ul.querySelectorAll('li').length + 1;
+    obIntersection.observe(li);
     ul.appendChild(li);
 }, 1000)
+
