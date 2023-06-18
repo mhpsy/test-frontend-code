@@ -8,8 +8,11 @@ gsap.to(box2I, {
     duration: 2,
     scrollTrigger: {
         trigger: box2I,
-        start: "top 50%",//触发动画的位置 顶部到达视口的20%的时候
-        end: () => "+=" + box2I.offsetHeight,//这个是动态的获取元素的高度
+        // scrub: true,//这个是用来控制动画的播放速度的
+        scrub: 4,//这个是用来控制动画的播放速度的
+        start: "top 80%",//触发动画的位置 顶部到达视口的20%的时候
+        // end: () => "+=" + box2I.offsetHeight,//这个是动态的获取元素的高度
+        end: "bottom 40%",//触发动画的位置 底部到达视口的20%的时候
         toggleActions: "play reverse play reverse",//这个是触发动画的时候的动作
         // onEnter: () => console.log("enter"),//这个是进入的时候触发的
         // onLeave: () => console.log("leave"),//这个是离开的时候触发的

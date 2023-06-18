@@ -1,0 +1,21 @@
+.box {
+    height: 100vh;
+    background-color: pink;
+}
+
+.square {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+}
+
+.square2 {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
