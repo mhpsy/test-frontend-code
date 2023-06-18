@@ -1,0 +1,34 @@
+.box {
+    height: 100vh;
+}
+
+.box1 {
+    background-color: pink;
+}
+
+.box2 {
+    background-color: deepskyblue;
+}
+
+.box2I {
+    width: 100px;
+    height: 100px;
+    background-color: darkcyan;
+}
+
+.box3I {
+    width: 100px;
+    height: 100px;
+    background-color: rebeccapurple;
+    margin-top: 200px;
+}
+
+.box2I.active {
+    background-color: darkorange;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
